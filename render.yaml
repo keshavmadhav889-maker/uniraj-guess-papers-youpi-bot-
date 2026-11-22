@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: uniraj-guess-papers-youpi-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: DATABASE_PATH
+        value: /data/uniraj.sqlite3
+      - key: PAPERS_DIR
+        value: /data/papers
+      - key: PAYMENT_MODE
+        value: disabled
