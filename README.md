@@ -7,7 +7,7 @@ A separate Telegram bot project for Rajasthan University Guess Papers. This repo
 - Telegram menu: Buy, Search, My Orders, Help, About
 - Course / semester / subject / paper catalog
 - Admin PDF upload with configurable price
-- Two-admin support through `ADMIN_IDS`
+- Single-admin setup (currently configured for one admin; additional admins can be added later)
 - SQLite order history
 - Health endpoint for hosting checks
 - **Payments are intentionally disabled.** There is no fake payment-success path and no automatic PDF delivery until a trustworthy, production-suitable payment provider and its verification contract are approved and configured.
@@ -21,7 +21,7 @@ Before accepting real customer payments, have an adult/business owner review the
 ## Required environment variables
 
 - `BOT_TOKEN`: Telegram bot token (keep only in hosting secrets)
-- `ADMIN_IDS`: two Telegram numeric user IDs, comma-separated
+- `ADMIN_IDS`: Telegram numeric user ID (add another comma-separated ID later if needed)
 - `DATABASE_PATH`: persistent SQLite database path
 - `PAPERS_DIR`: persistent PDF storage directory
 - `PAYMENT_MODE`: remains `disabled` in this starter
